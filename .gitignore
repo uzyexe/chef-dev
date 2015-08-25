@@ -1,0 +1,5 @@
+/cookbooks/
+.chef
+vendor
+.bundle
+*.lock

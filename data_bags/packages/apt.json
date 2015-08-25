@@ -1,0 +1,12 @@
+{
+    "id": "apt",
+    "targets": [
+        "zsh",
+        "git",
+        "tig",
+        "tmux",
+        "markdown",
+        "tree",
+        "expect"
+    ]
+}

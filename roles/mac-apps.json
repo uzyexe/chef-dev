@@ -1,0 +1,14 @@
+{
+    "name": "mac-apps",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {},
+    "description": "Install mac apps as dmg package",
+    "run_list": [
+        "recipe[mac-apps::chrome]",
+        "recipe[mac-apps::virtualbox]"
+    ],
+    "env_run_lists" : {},    
+    "override_attributes": {}
+}
+

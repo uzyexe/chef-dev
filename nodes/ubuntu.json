@@ -1,0 +1,17 @@
+// ubuntu.json
+
+{
+  "user":{
+    "name": "ubuntu",
+    "home": "/home/ubuntu",
+      "group": "ubuntu"
+  },
+  "run_list": [
+    "rubies::setup_ubuntu",
+    "rubies::rbenv",
+    "rubies::ruby_build",
+    "rubies::2.2.3",
+    "apt",
+    "dotfiles"
+  ]
+}

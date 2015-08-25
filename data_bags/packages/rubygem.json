@@ -1,0 +1,11 @@
+{
+    "id": "rubygem",
+    "targets": {
+        "bundler": "",
+        "gemcutter": "",
+        "rspec": "",
+        "rake": "",
+        "pry": "",
+        "guard-rspec": ""
+    }
+}

@@ -1,0 +1,12 @@
+// osx.json
+
+{
+  "run_list": [
+    "recipe[homebrew]",
+    "recipe[dotfiles]",
+    "recipe[dmg]",
+    "recipe[brew]",
+    "recipe[ruby::gem]",
+    "role[mac-apps]"
+  ]
+}

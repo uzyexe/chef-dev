@@ -1,0 +1,25 @@
+{
+    "id": "homebrew",
+    "targets": [
+        "zsh",
+        "git",
+        "hg",
+        "tig",
+        "vim",
+        "emacs",
+        "coreutils",
+        "rmtrash",
+        "curl",
+        "wget",
+        "tmux",
+        "iterm2",
+        "proctools",
+        "markdown",
+        "tree",
+        "dash",
+        "sourcetree",
+        "speedlimit",
+        "jq",
+        "go"
+    ]
+}
