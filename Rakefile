@@ -9,7 +9,7 @@ end
 
 desc "Install third paty cookbooks"
 task :berks do
-  sh "berks --path cookbooks"
+  sh "berks vendor cookbooks"
 end
 
 namespace :run do
@@ -36,3 +36,4 @@ namespace :cookbook do
     sh "foodcritic site-cookbooks"
   end
 end
+
