@@ -2,12 +2,8 @@
 # Cookbook Name:: dotfile
 # Recipe:: default
 #
-# Copyright 2013, YOUR_COMPANY_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
 
-repo = "https://github.com/tcnksm/dotfiles.git"
+repo = "https://github.com/#{node[:dotfile][:username]}/dotfiles.git"
 
 git node["user"]["home"]+"/.dotfiles" do 
   user  node["user"]["name"]

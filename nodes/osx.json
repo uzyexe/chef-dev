@@ -3,10 +3,69 @@
 {
   "run_list": [
     "recipe[homebrew]",
-    "recipe[dotfiles]",
     "recipe[dmg]",
-    "recipe[brew]",
-    "recipe[ruby::gem]",
-    "role[mac-apps]"
-  ]
+    "recipe[homebrew::install_formulas]",
+    "recipe[homebrew::cask]",
+    "recipe[homebrew::install_casks]",
+    "recipe[openssl]"
+  ],
+  "openssl": {
+    "packages": "openssl"
+  },
+  "ruby": {
+    "gems": {
+      "bundler": "",
+      "gemcutter": "",
+      "rspec": "",
+      "rake": "",
+      "pry": "",
+      "guard-rspec": ""
+    }
+  },
+  "homebrew" : {
+    "formulas": [
+      "bash-completion",
+      "cliclick",
+      "coreutils",
+      "curl",
+      "dash",
+      "direnv",
+      "emacs",
+      "git",
+      "go",
+      "imagemagick",
+      "jq",
+      "nodenv",
+      "markdown",
+      "pyenv",
+      "rbenv",
+      "rmtrash",
+      "sqlite",
+      "tig",
+      "tmux",
+      "tree",
+      "vim",
+      "wget",
+      "zsh"
+    ],
+    "casks": [
+      "adobe-reader",
+      "alfred",
+      "atom",
+      "gitbook",
+      "iterm2",
+      "karabiner",
+      "dockertoolbox",
+      "google-chrome",
+      "google-japanese-ime",
+      "night-owl",
+      "skype",
+      "sqwiggle",
+      "sourcetree",
+      "speedlimit",
+      "sublime-text",
+      "vagrant",
+      "virtualbox"
+    ]
+  }
 }

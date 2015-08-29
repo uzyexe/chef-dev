@@ -12,5 +12,6 @@ This is repo for collecting my cookbooks for my own working environments.
 ## Usage
 
 ```
+% sudo rake:init
 % sudo rake
 ```

@@ -1,5 +1,6 @@
-
 task :default => "run:osx"
+
+desc "Install rubygems and third paty cookbooks"
 task :init => [:bundle, :berks]
 
 desc "Install rubygems"
@@ -36,4 +37,3 @@ namespace :cookbook do
     sh "foodcritic site-cookbooks"
   end
 end
-

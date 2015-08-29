@@ -7,11 +7,25 @@
       "group": "ubuntu"
   },
   "run_list": [
-    "rubies::setup_ubuntu",
-    "rubies::rbenv",
-    "rubies::ruby_build",
-    "rubies::2.2.3",
-    "apt",
-    "dotfiles"
+    "recipe[dotfiles]",
+    "recipe[packages]",
+    "recipe[rbenv-install-rubies]"
+  ],
+  "rbenv-install-rubies": {
+    "global_version": "2.2.3",
+    "other_versions": [ "2.2.2", "2.2.3" ],
+    "gems": [
+      "bundler",
+      "gemcutter",
+      "rspec",
+  ],
+  "packages": [
+    "zsh",
+    "git",
+    "tig",
+    "tmux",
+    "markdown",
+    "tree",
+    "expect"
   ]
 }
