@@ -1,7 +1,7 @@
-Chef for my dev environment
+Chef for dev environment
 ====
 
-This is repo for collecting my cookbooks for my own working environments.
+This is repo for collecting cookbooks for dev working environments.
 
 ## Install Chef
 
