@@ -6,7 +6,7 @@ This is repo for collecting cookbooks for Dev workstation environments.
 ## Install Chef
 
 ```
-% bin/init.sh
+% sudo bin/init.sh
 ```
 
 ## Usage
