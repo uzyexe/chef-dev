@@ -7,8 +7,7 @@
     "recipe[homebrew::install_formulas]",
     "recipe[homebrew::cask]",
     "recipe[homebrew::install_casks]",
-    "recipe[openssl]",
-    "recipe[dev-docker]"
+    "recipe[openssl]"
   ],
   "openssl": {
     "packages": "openssl"
