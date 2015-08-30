@@ -21,7 +21,7 @@ namespace :run do
 
   desc "Run at Linux environment"
   task :linux do
-    sh "sudo chef-solo -c config/solo.rb -j nodes/linux.json"
+    sh "chef-solo -c config/solo.rb -j nodes/linux.json"
   end
 end
 
