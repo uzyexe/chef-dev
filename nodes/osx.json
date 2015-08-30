@@ -13,16 +13,6 @@
   "openssl": {
     "packages": "openssl"
   },
-  "ruby": {
-    "gems": {
-      "bundler": "",
-      "gemcutter": "",
-      "rspec": "",
-      "rake": "",
-      "pry": "",
-      "guard-rspec": ""
-    }
-  },
   "homebrew" : {
     "formulas": [
       "bash-completion",
