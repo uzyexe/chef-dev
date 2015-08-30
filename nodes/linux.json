@@ -7,18 +7,6 @@
     "recipe[vagrant]",
     "recipe[anyenv]"
   ],
-  "rbenv_install_rubies": {
-    "global_version": "2.2.3",
-    "other_versions": [
-      "2.2.2",
-      "2.2.3"
-    ],
-    "gems": [
-      "bundler",
-      "gemcutter",
-      "rspec"
-    ]
-  },
   "packages": [
     "git",
     "tig",
