@@ -11,7 +11,16 @@ This is repo for collecting cookbooks for Dev workstation environments.
 
 ## Usage
 
+### OSX
+
 ```
 % rake init
 % rake
+```
+
+### Linux
+
+```
+% rake init
+% rake run:linux
 ```
