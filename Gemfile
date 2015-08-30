@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'chef', '12.4.1'
+gem 'chef'
 gem 'knife-solo'
 gem 'berkshelf'
