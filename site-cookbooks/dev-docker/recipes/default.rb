@@ -7,6 +7,12 @@
 # All rights reserved - Do Not Redistribute
 #
 
+docker_service 'default' do
+  host 'unix:///var/run/docker.sock'
+  registry_mirror "http://#{node['ipaddress']}:5000"
+  action [:create, :start]
+end
+
 docker_image 'registry' do
   tag 'latest'
   action :pull
@@ -29,8 +35,3 @@ docker_container 'registry' do
   action :run
 end
 
-docker_service 'default' do
-  host 'unix:///var/run/docker.sock'
-  registry_mirror "http://#{node['ipaddress']}:5000"
-  action [:create, :start]
-end
