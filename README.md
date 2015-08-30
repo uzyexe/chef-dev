@@ -6,12 +6,12 @@ This is repo for collecting cookbooks for Dev workstation environments.
 ## Install Chef
 
 ```
-% sudo bin/init.sh
+% curl -L https://www.opscode.com/chef/install.sh | sudo bash
 ```
 
 ## Usage
 
 ```
-% sudo rake init
-% sudo rake
+% rake init
+% rake
 ```
