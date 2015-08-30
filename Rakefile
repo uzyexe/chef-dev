@@ -19,9 +19,9 @@ namespace :run do
     sh "chef-solo -c config/solo.rb -j nodes/osx.json"
   end
 
-  desc "Run at Ubuntu environment"
+  desc "Run at Linux environment"
   task :linux do
-    sh "sudo ~/.rbenv/versions/1.9.3-p448/bin/chef-solo -c config/solo.rb -j nodes/ubuntu.json nodes/ubuntu.json"
+    sh "sudo chef-solo -c config/solo.rb -j nodes/linux.json"
   end
 end
 

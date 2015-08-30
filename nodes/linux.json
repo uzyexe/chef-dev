@@ -1,26 +1,23 @@
 // ubuntu.json
 
 {
-  "user":{
-    "name": "ubuntu",
-    "home": "/home/ubuntu",
-      "group": "ubuntu"
-  },
   "run_list": [
-    "recipe[dotfiles]",
     "recipe[packages]",
     "recipe[rbenv-install-rubies]"
   ],
-  "rbenv-install-rubies": {
+  "rbenv_install_rubies": {
     "global_version": "2.2.3",
-    "other_versions": [ "2.2.2", "2.2.3" ],
+    "other_versions": [
+      "2.2.2",
+      "2.2.3"
+    ],
     "gems": [
       "bundler",
       "gemcutter",
-      "rspec",
-  ],
+      "rspec"
+    ]
+  },
   "packages": [
-    "zsh",
     "git",
     "tig",
     "tmux",
