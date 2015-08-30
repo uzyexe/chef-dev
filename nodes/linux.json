@@ -2,9 +2,10 @@
 
 {
   "run_list": [
+    "recipe[packages]",
     "recipe[dev-docker]",
     "recipe[vagrant]",
-    "recipe[packages]"
+    "recipe[anyenv]"
   ],
   "rbenv_install_rubies": {
     "global_version": "2.2.3",
