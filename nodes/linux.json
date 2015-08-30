@@ -2,6 +2,8 @@
 
 {
   "run_list": [
+    "recipe[docker]",
+    "recipe[vagrant]",
     "recipe[packages]",
     "recipe[rbenv-install-rubies]"
   ],
