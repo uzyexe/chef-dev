@@ -5,17 +5,19 @@ task :init => [:bundle, :berks]
 
 desc "Install rubygems"
 task :bundle do
+  sh "gem install bundler"
   sh "bundle --path vendor/bundle --binstubs .bundle/bin"
 end
 
 desc "Install third-paty Chef cookbooks"
 task :berks do
-  sh "berks vendor cookbooks"
+  sh ".bundle/bin/berks vendor cookbooks"
 end
 
 namespace :run do
   desc "Run at OSX environment"
   task :osx do
+    sh "brew cask install adobe-reader"
     sh "chef-solo -c config/solo.rb -j nodes/osx.json"
   end
 

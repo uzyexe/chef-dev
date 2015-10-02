@@ -11,11 +11,18 @@ This is repo for collecting cookbooks for Dev workstation environments.
 
 ## Usage
 
+###download repository
+```
+% git clone https://github.com/uzyexe/chef-dev.git
+
+```
+
 ### Mac OS X
 
 ```
-% rake init
-% rake
+% cd chef-dev  
+% sudo rake init
+% sudo rake
 ```
 
 ### Linux
