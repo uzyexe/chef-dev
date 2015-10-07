@@ -20,7 +20,8 @@ This is repo for collecting cookbooks for Dev workstation environments.
 ### Mac OS X
 
 ```
-% cd chef-dev  
+% brew install caskroom/cask/brew-cask
+% cd chef-dev
 % sudo rake init
 % sudo rake
 ```
