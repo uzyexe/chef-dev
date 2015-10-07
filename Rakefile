@@ -17,8 +17,8 @@ end
 namespace :run do
   desc "Run at OSX environment"
   task :osx do
-    sh "brew cask install --force adobe-reader"
     sh "chef-solo -c config/solo.rb -j nodes/osx.json"
+    sh "brew cask install --force adobe-reader"
   end
 
   desc "Run at Linux environment"
