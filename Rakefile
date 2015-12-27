@@ -18,6 +18,7 @@ namespace :run do
   desc "Run at OSX environment"
   task :osx do
     sh "chef-solo -c config/solo.rb -j nodes/osx.json"
+
     # Fix: Installing adobe-reader in brew-cask fails
     # https://github.com/caskroom/homebrew-cask/issues/6332
     sh "[ `brew cask list | grep -w adobe-reader || echo 'missing'` == 'adobe-reader' ] &&
@@ -25,6 +26,21 @@ namespace :run do
       brew cask uninstall --force adobe-reader && brew cask install --force adobe-reader ||
       # False: Install the Adobe Reader
       brew cask install --force adobe-reader"
+
+    # Setup the anyenv
+    sh "ls -al ${HOME}/.anyenv || git clone https://github.com/riywo/anyenv ${HOME}/.anyenv"
+    sh "if [ ! -d ${HOME}/.anyenv/plugins ] ; then mkdir ${HOME}/.anyenv/plugins; fi"
+    sh "ls -al ${HOME}/.anyenv/plugins/anyenv-update || git clone https://github.com/znz/anyenv-update.git ${HOME}/.anyenv/plugins/anyenv-update"
+    sh "export PATH=\"${HOME}/.anyenv/bin:$PATH\""
+    sh "grep -w '${HOME}/.anyenv/bin' ~/.bashrc || echo 'export PATH=\"${HOME}/.anyenv/bin:$PATH\"' >> ~/.bashrc"
+    sh "eval \"$(anyenv init -)\""
+    sh "grep -w 'anyenv init -' ~/.bashrc || echo 'eval \"$(anyenv init -)\"' >> ~/.bashrc"
+    sh "anyenv envs | grep -w rbenv || anyenv install rbenv"
+    sh "anyenv envs | grep -w plenv || anyenv install plenv"
+    sh "anyenv envs | grep -w pyenv || anyenv install pyenv"
+    sh "anyenv envs | grep -w ndenv || anyenv install ndenv"
+    sh "anyenv envs | grep -w goenv || anyenv install goenv"
+    sh "echo 'Please reload your profile (exec $SHELL -l) or open a new session.'"
   end
 
   desc "Run at Linux environment"
