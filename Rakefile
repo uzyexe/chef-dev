@@ -19,6 +19,14 @@ namespace :run do
   task :osx do
     sh "chef-solo -c config/solo.rb -j nodes/osx.json"
 
+    # Fix: Installing adobe-reader in brew-cask fails
+    # https://github.com/caskroom/homebrew-cask/issues/6332
+    sh "[ `brew cask list | grep -w adobe-reader || echo 'missing'` == 'adobe-reader' ] &&
+      # True: Reinstall the Adobe Reader
+      brew cask uninstall --force adobe-reader && brew cask install --force adobe-reader ||
+      # False: Install the Adobe Reader
+      brew cask install --force adobe-reader"
+
     # Setup the anyenv
     sh "ls -al ${HOME}/.anyenv || git clone https://github.com/riywo/anyenv ${HOME}/.anyenv"
     sh "if [ ! -d ${HOME}/.anyenv/plugins ] ; then mkdir ${HOME}/.anyenv/plugins; fi"
@@ -32,14 +40,7 @@ namespace :run do
     sh "anyenv envs | grep -w pyenv || anyenv install pyenv"
     sh "anyenv envs | grep -w ndenv || anyenv install ndenv"
     sh "anyenv envs | grep -w goenv || anyenv install goenv"
-
-    # Fix: Installing adobe-reader in brew-cask fails
-    # https://github.com/caskroom/homebrew-cask/issues/6332
-    sh "[ `brew cask list | grep -w adobe-reader || echo 'missing'` == 'adobe-reader' ] &&
-      # True: Reinstall the Adobe Reader
-      brew cask uninstall --force adobe-reader && brew cask install --force adobe-reader ||
-      # False: Install the Adobe Reader
-      brew cask install --force adobe-reader"
+    sh "echo 'Please reload your profile (exec $SHELL -l) or open a new session.'"
   end
 
   desc "Run at Linux environment"
