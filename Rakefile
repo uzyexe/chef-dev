@@ -40,6 +40,7 @@ namespace :run do
     sh "anyenv envs | grep -w pyenv || anyenv install pyenv"
     sh "anyenv envs | grep -w ndenv || anyenv install ndenv"
     sh "anyenv envs | grep -w goenv || anyenv install goenv"
+    sh "chown -R ${SUDO_USER} ${HOME}/.anyenv"
     sh "echo 'Please reload your profile (exec $SHELL -l) or open a new session.'"
   end
 
