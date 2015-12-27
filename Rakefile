@@ -18,7 +18,13 @@ namespace :run do
   desc "Run at OSX environment"
   task :osx do
     sh "chef-solo -c config/solo.rb -j nodes/osx.json"
-    sh "brew cask install --force adobe-reader"
+    # Fix: Installing adobe-reader in brew-cask fails
+    # https://github.com/caskroom/homebrew-cask/issues/6332
+    sh "[ `brew cask list | grep -w adobe-reader || echo 'missing'` == 'adobe-reader' ] &&
+      # True: Reinstall the Adobe Reader
+      brew cask uninstall --force adobe-reader && brew cask install --force adobe-reader ||
+      # False: Install the Adobe Reader
+      brew cask install --force adobe-reader"
   end
 
   desc "Run at Linux environment"
