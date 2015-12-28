@@ -17,7 +17,8 @@ end
 namespace :run do
   desc "Run at OSX environment"
   task :osx do
-    sh "chef-solo -c config/solo.rb -j nodes/osx.json"
+    sh "sudo chown -R ${USER} /Library/Caches/Homebrew/"
+    sh "sudo chef-solo -c config/solo.rb -j nodes/osx.json"
 
     # Fix: Installing adobe-reader in brew-cask fails
     # https://github.com/caskroom/homebrew-cask/issues/6332
@@ -40,7 +41,7 @@ namespace :run do
     sh "anyenv envs | grep -w pyenv || anyenv install pyenv"
     sh "anyenv envs | grep -w ndenv || anyenv install ndenv"
     sh "anyenv envs | grep -w goenv || anyenv install goenv"
-    sh "chown -R ${SUDO_USER} ${HOME}/.anyenv"
+    sh "chown -R ${USER} ${HOME}/.anyenv"
     sh "echo 'Please reload your profile (exec $SHELL -l) or open a new session.'"
   end
 

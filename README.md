@@ -14,14 +14,13 @@ chef-dev is collecting cookbooks for DevOps workstation environments.
 ### Download
 ```
 % git clone https://github.com/uzyexe/chef-dev.git
-
 ```
 
 ### Mac OS X
 
 ```
 % rake init
-% sudo rake
+% rake run:osx
 ```
 
 ### Linux
