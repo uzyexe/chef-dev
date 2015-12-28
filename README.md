@@ -3,10 +3,10 @@ Chef for Dev workstation environment
 
 This is repo for collecting cookbooks for Dev workstation environments.
 
-## Install Chef
+## Install the Chef DK (Chef Development Kit)
 
 ```
-% curl -L https://www.opscode.com/chef/install.sh | sudo bash
+% curl -sL https://www.chef.io/chef/install.sh | sudo bash -s -- -P chefdk
 ```
 
 ## Usage
