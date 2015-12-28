@@ -16,6 +16,7 @@
   "homebrew" : {
     "formulas": [
       "bash-completion",
+      "chromedriver",
       "cliclick",
       "coreutils",
       "curl",
