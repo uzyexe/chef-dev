@@ -1,28 +1,26 @@
-Chef for Dev workstation environment
+Chef for DevOps workstation environment
 ====
 
-This is repo for collecting cookbooks for Dev workstation environments.
+chef-dev is collecting cookbooks for DevOps workstation environments.
 
-## Install Chef
+## Install the Chef DK (Chef Development Kit)
 
 ```
-% curl -L https://www.opscode.com/chef/install.sh | sudo bash
+% curl -sL https://www.chef.io/chef/install.sh | sudo bash -s -- -P chefdk
 ```
 
 ## Usage
 
-###download repository
+### Download
 ```
 % git clone https://github.com/uzyexe/chef-dev.git
-
 ```
 
 ### Mac OS X
 
 ```
-% cd chef-dev  
-% sudo rake init
-% sudo rake
+% rake init
+% rake run:osx
 ```
 
 ### Linux
