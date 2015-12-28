@@ -1,7 +1,7 @@
-Chef for Dev workstation environment
+Chef for DevOps workstation environment
 ====
 
-This is repo for collecting cookbooks for Dev workstation environments.
+chef-dev is collecting cookbooks for DevOps workstation environments.
 
 ## Install the Chef DK (Chef Development Kit)
 
@@ -11,7 +11,7 @@ This is repo for collecting cookbooks for Dev workstation environments.
 
 ## Usage
 
-###download repository
+### Download
 ```
 % git clone https://github.com/uzyexe/chef-dev.git
 
