@@ -31,7 +31,7 @@ namespace :run do
     # Setup the anyenv
     sh "ls -al ${HOME}/.anyenv || git clone https://github.com/riywo/anyenv ${HOME}/.anyenv"
     sh "if [ ! -d ${HOME}/.anyenv/plugins ] ; then mkdir ${HOME}/.anyenv/plugins; fi"
-    sh "ls -al ${HOME}/.anyenv/plugins/anyenv-update || git clone https://github.com/znz/anyenv-update.git ${HOME}/.anyenv/plugins/anyenv-update"
+    sh "if [ ! -d ${HOME}/.anyenv/plugins/anyenv-update ]; then git clone https://github.com/znz/anyenv-update.git ${HOME}/.anyenv/plugins/anyenv-update; fi"
     sh "export PATH=\"${HOME}/.anyenv/bin:$PATH\""
     sh "grep -w '${HOME}/.anyenv/bin' ~/.bashrc || echo 'export PATH=\"${HOME}/.anyenv/bin:$PATH\"' >> ~/.bashrc"
     sh "eval \"$(anyenv init -)\""

@@ -34,7 +34,10 @@
       "tree",
       "vim",
       "wget",
-      "zsh"
+      "zsh",
+      // nokogiri requirement packages
+      "libxml2",
+      "libxslt"
     ],
     "casks": [
       "alfred",
