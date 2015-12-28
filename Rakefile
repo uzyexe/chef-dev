@@ -5,7 +5,7 @@ task :init => [:bundle, :berks]
 
 desc "Install rubygems"
 task :bundle do
-  sh "gem install bundler"
+  sh "sudo gem install bundler"
   sh "bundle --path vendor/bundle --binstubs .bundle/bin"
 end
 
