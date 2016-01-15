@@ -58,7 +58,7 @@ namespace :cookbook do
     sh "knife cookbook create #{name} -o site-cookbooks"
   end
 
-  desc "Validate cookbooks at sitte-cookbooks"
+  desc "Validate cookbooks at site-cookbooks"
   task :validate do
     sh "foodcritic site-cookbooks"
   end
