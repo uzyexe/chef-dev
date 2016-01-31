@@ -30,6 +30,7 @@
       "markdown",
       "rmtrash",
       "sqlite",
+      "shellcheck",
       "tig",
       "tmux",
       "tree",

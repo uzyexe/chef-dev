@@ -13,6 +13,7 @@
     "tcpdump",
     "tmux",
     "markdown",
+    "shellcheck",
     "tree",
     "expect"
   ]
