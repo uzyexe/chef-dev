@@ -4,6 +4,7 @@
   "run_list": [
     "recipe[packages]",
     "recipe[dev-docker]",
+    "recipe[packer]",
     "recipe[vagrant]",
     "recipe[anyenv]"
   ],
