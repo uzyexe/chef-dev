@@ -14,24 +14,14 @@ docker_service 'default' do
 end
 
 docker_image 'registry' do
-  tag 'latest'
+  tag '2'
   action :pull
   notifies :redeploy, 'docker_container[registry]'
 end
 
 docker_container 'registry' do
   repo 'registry'
-  tag 'latest'
-  env [
-    'STANDALONE=false',
-    'MIRROR_SOURCE=https://registry-1.docker.io',
-    'MIRROR_SOURCE_INDEX=https://index.docker.io',
-    'SQLALCHEMY_INDEX_DATABASE=sqlite:////tmp/registry/docker-registry.db',
-    'SQLALCHEMY_INDEX_DATABASE=sqlite:////tmp/registry/docker-registry.db'
-  ]
-  dns ['8.8.8.8', '8.8.4.4']
+  tag '2'
   port '5000:5000'
-  volumes ['/tmp/registry:/tmp/registry']
   action :run
 end
-
