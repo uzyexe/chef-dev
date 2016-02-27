@@ -9,7 +9,7 @@
 
 docker_service 'default' do
   host 'unix:///var/run/docker.sock'
-  registry_mirror "http://#{node['ipaddress']}:5000"
+  registry_mirror "http://#{node['ipaddress']}:5001"
   action [:create, :start]
 end
 
@@ -22,6 +22,6 @@ end
 docker_container 'registry' do
   repo 'registry'
   tag '2'
-  port '5000:5000'
+  port '5001:5000'
   action :run
 end
