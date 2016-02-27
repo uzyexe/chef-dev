@@ -45,6 +45,7 @@
     "casks": [
       "alfred",
       "atom",
+      "caffeine",
       "gitbook",
       "iterm2",
       "insomniax",
