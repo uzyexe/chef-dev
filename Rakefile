@@ -5,8 +5,8 @@ task :init => [:bundle, :berks]
 
 desc "Install rubygems"
 task :bundle do
-  sh "sudo gem install bundler --no-ri --no-rdoc"
-  sh "sudo bundle --path vendor/bundle --binstubs .bundle/bin"
+  sh "gem install bundler --no-ri --no-rdoc"
+  sh "bundle --path vendor/bundle --binstubs .bundle/bin"
 end
 
 desc "Install third-paty Chef cookbooks"
