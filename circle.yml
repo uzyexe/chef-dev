@@ -1,0 +1,8 @@
+dependencies:
+  cache_directories:
+  - "vendor/bundle"
+test:
+  pre:
+    - bundle check || bundle install --jobs=4 --retry=3
+  override:
+    - bundle exec rake circleci
