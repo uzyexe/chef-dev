@@ -43,7 +43,6 @@
       "libxslt"
     ],
     "casks": [
-      "alfred",
       "atom",
       "caffeine",
       "gitbook",
