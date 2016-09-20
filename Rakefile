@@ -32,7 +32,7 @@ end
 namespace :run do
   desc "Run at OSX environment"
   task :osx do
-    sh "sudo chef-solo -c config/solo.rb -j nodes/osx.json"
+    sh "sudo bundle ex chef-solo -c config/solo.rb -j nodes/osx.json"
     sh "sudo chown -R ${USER} /Library/Caches/Homebrew/"
 
     # Fix: Installing adobe-reader in brew-cask fails
