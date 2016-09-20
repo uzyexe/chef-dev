@@ -39,5 +39,7 @@ build/
 
 ## Chef
 
-/.chef/
-/cookbooks/
+bundle
+.chef
+cookbooks
+config/local-mode-cache
