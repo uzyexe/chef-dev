@@ -1,7 +1,7 @@
 task :default => "run:osx"
 
 desc "Install rubygems and third-paty Chef cookbooks"
-task :init => [:bundle, :berks]
+task :init => [:bundle, :setup, :berks]
 
 desc "Install rubygems"
 task :bundle do
@@ -21,9 +21,20 @@ task :bundle do
   sh "anyenv envs | grep -w goenv || anyenv install goenv"
   sh "chown -R ${USER} ${HOME}/.anyenv"
   sh "echo 'Please reload your profile (exec $SHELL -l) or open a new session.'"
+end
+
+desc "Setup Ruby Gems"
+task :setup do
+  sh "if [ ! -d ~/.anyenv/envs/rbenv/versions/$(cat .ruby-version) ]; then rbenv install $(cat .ruby-version); fi"
+  sh "export PATH=\"$(gem env | grep EXECUTABLE.*bin$ | awk '{print $4}' | sed s/[[:space:]]//):$PATH\""
+  sh "grep -w 'EXECUTABLE' ~/.bashrc || echo 'export PATH=\"$(gem env | grep EXECUTABLE.*bin$ | cut -d: -f2 | sed s/[[:space:]]//):$PATH\"' >> ~/.bashrc"
+  sh "export PATH=\"$(gem env | grep USER | grep .gem/ruby | awk '{print $5}' | sed s/[[:space:]]//)/bin:$PATH\""
+  sh "grep -w 'USER' ~/.bashrc || echo 'export PATH=\"$(gem env | grep USER | grep .gem/ruby | cut -d: -f2| sed s/[[:space:]]//)/bin:$PATH\"' >> ~/.bashrc"
+  sh "echo 'Please reload your profile (exec $SHELL -l) or open a new session.'"
   sh "gem install --user-install bundler"
   sh "bundle --path vendor/bundle --binstubs .bundle/bin"
 end
+
 
 desc "Install third-paty Chef cookbooks"
 task :berks do
