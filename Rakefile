@@ -7,6 +7,7 @@ desc "Install rubygems"
 task :bundle do
   # Setup the anyenv
   sh "ls -al ${HOME}/.anyenv || git clone https://github.com/riywo/anyenv ${HOME}/.anyenv"
+  sh "if [ ! -e ${HOME}/.bash_profile ] ; then echo 'if [ -f ~/.bashrc ] ; then . ~/.bashrc; fi' > ${HOME}/.bash_profile; fi"
   sh "if [ ! -d ${HOME}/.anyenv/plugins ] ; then mkdir ${HOME}/.anyenv/plugins; fi"
   sh "if [ ! -d ${HOME}/.anyenv/plugins/anyenv-update ]; then git clone https://github.com/znz/anyenv-update.git ${HOME}/.anyenv/plugins/anyenv-update; fi"
   sh "export PATH=\"${HOME}/.anyenv/bin:$PATH\""
