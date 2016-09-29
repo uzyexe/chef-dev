@@ -43,6 +43,7 @@
       "libxslt"
     ],
     "casks": [
+      "appcleaner",
       "atom",
       "caffeine",
       "gitbook",
