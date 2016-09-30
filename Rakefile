@@ -49,7 +49,7 @@ namespace :run do
 
     # Fix: Installing adobe-reader in brew-cask fails
     # https://github.com/caskroom/homebrew-cask/issues/6332
-    sh "sudo chown ${USER} ~/Library/Caches/Homebrew/Cask"
+    sh "if [ -d ~/Library/Caches/Homebrew/Cask ]; then sudo chown ${USER} ~/Library/Caches/Homebrew/Cask; fi"
     sh "[ `brew cask list | grep -w adobe-reader || echo 'missing'` == 'adobe-reader' ] &&
       # True: Reinstall the Adobe Reader
       brew cask uninstall --force adobe-reader && brew cask install --caskroom=/opt/homebrew-cask/Caskroom --force adobe-reader ||
