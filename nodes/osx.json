@@ -23,6 +23,7 @@
       "dash",
       "direnv",
       "emacs",
+      "fswatch",
       "git",
       "go",
       "imagemagick",
