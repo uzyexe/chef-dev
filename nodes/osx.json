@@ -26,6 +26,7 @@
       "fswatch",
       "git",
       "go",
+      "graphviz",
       "imagemagick",
       "jq",
       "markdown",
