@@ -38,7 +38,7 @@ end
 
 desc "Install third-paty Chef cookbooks"
 task :berks do
-  sh ".bundle/bin/berks vendor cookbooks"
+  sh "bundle ex berks vendor cookbooks"
 end
 
 namespace :run do
