@@ -33,7 +33,6 @@
       "postgresql",
       "packer",
       "rmtrash",
-      "rsync",
       "sqlite",
       "shellcheck",
       "tig",
