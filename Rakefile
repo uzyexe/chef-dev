@@ -35,32 +35,9 @@ task :setup do
   sh "bundle --path vendor/bundle --binstubs .bundle/bin"
 end
 
-
 desc "Install third-paty Chef cookbooks"
 task :berks do
   sh "bundle ex berks vendor cookbooks"
-end
-
-namespace :run do
-  desc "Run at OSX environment"
-  task :osx do
-    sh "sudo bundle ex chef-solo -c config/solo.rb -j nodes/osx.json"
-    sh "sudo chown -R ${USER} /Library/Caches/Homebrew/"
-
-    # Fix: Installing adobe-reader in brew-cask fails
-    # https://github.com/caskroom/homebrew-cask/issues/6332
-    sh "if [ -d ~/Library/Caches/Homebrew/Cask ]; then sudo chown ${USER} ~/Library/Caches/Homebrew/Cask; fi"
-    sh "[ `brew cask list | grep -w adobe-reader || echo 'missing'` == 'adobe-reader' ] &&
-      # True: Reinstall the Adobe Reader
-      brew cask uninstall --force adobe-reader && brew cask install --caskroom=/opt/homebrew-cask/Caskroom --force adobe-reader ||
-      # False: Install the Adobe Reader
-      brew cask install --caskroom=/opt/homebrew-cask/Caskroom --force adobe-reader"
-  end
-
-  desc "Run at Linux environment"
-  task :linux do
-    sh "chef-solo -c config/solo.rb -j nodes/linux.json"
-  end
 end
 
 namespace :cookbook do
