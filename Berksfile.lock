@@ -1,7 +1,7 @@
 DEPENDENCIES
   anyenv
     git: https://github.com/uzyexe/chef-anyenv.git
-    revision: bb3ecbedef3a6bba056c5fc20af5aeec5c47e45c
+    revision: e7aa5bce4348aac4079edfaec35f64fe85641e4a
   dmg
   docker
   homebrew
@@ -10,7 +10,7 @@ DEPENDENCIES
   vagrant
 
 GRAPH
-  anyenv (0.0.2)
+  anyenv (0.1.0)
   build-essential (7.0.2)
     compat_resource (>= 12.14)
     mingw (>= 1.1)
