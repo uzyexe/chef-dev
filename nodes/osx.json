@@ -1,5 +1,3 @@
-// osx.json
-
 {
   "run_list": [
     "recipe[homebrew]",
@@ -8,7 +6,7 @@
     "recipe[homebrew::cask]",
     "recipe[homebrew::install_casks]",
     "recipe[openssl]",
-    "recipe[anyenv]"
+    "recipe[anyenv::user]"
   ],
   "openssl": {
     "packages": "openssl"
