@@ -31,8 +31,8 @@ task :setup do
   sh "export PATH=\"$(gem env | grep USER | grep .gem/ruby | awk '{print $5}' | sed s/[[:space:]]//)/bin:$PATH\""
   sh "grep -w 'USER' ~/.bashrc || echo 'export PATH=\"$(gem env | grep USER | grep .gem/ruby | cut -d: -f2| sed s/[[:space:]]//)/bin:$PATH\"' >> ~/.bashrc"
   sh "echo 'Please reload your profile (exec $SHELL -l) or open a new session.'"
-  sh "gem install --user-install bundler"
-  sh "bundle --path vendor/bundle --binstubs .bundle/bin"
+  sh "gem install bundler"
+  sh "bundle install --path vendor/bundle"
 end
 
 desc "Install third-paty Chef cookbooks"
