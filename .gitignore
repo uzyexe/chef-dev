@@ -43,3 +43,4 @@ bundle
 .chef
 cookbooks
 config/local-mode-cache
+/nodes/*.local.json
