@@ -1,7 +1,7 @@
 DEPENDENCIES
   anyenv
     git: https://github.com/uzyexe/chef-anyenv.git
-    revision: f666a3b46d2720bc1bc24f519d50e27f32cfddb9
+    revision: e2d59bccc17b1d0d55a0678b94ff2697d63cad3a
   dmg
   docker
   homebrew
