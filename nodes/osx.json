@@ -23,6 +23,7 @@
       "emacs",
       "fswatch",
       "git",
+      "git-lfs",
       "go",
       "graphviz",
       "imagemagick",
