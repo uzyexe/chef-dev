@@ -14,6 +14,7 @@
   "homebrew" : {
     "formulas": [
       "bash-completion",
+      "cdrtools",
       "chromedriver",
       "cliclick",
       "coreutils",
@@ -24,11 +25,13 @@
       "fswatch",
       "git",
       "git-lfs",
+      "gnu-sed",
       "go",
       "graphviz",
       "httpie",
       "imagemagick",
       "jq",
+      "lftp",
       "markdown",
       "postgresql",
       "packer",
