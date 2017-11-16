@@ -24,6 +24,7 @@
       "fswatch",
       "git",
       "git-lfs",
+      "gnu-sed",
       "go",
       "graphviz",
       "httpie",
