@@ -30,6 +30,7 @@
       "httpie",
       "imagemagick",
       "jq",
+      "lftp",
       "markdown",
       "postgresql",
       "packer",
