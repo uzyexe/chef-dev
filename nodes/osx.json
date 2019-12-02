@@ -38,6 +38,7 @@
       "rmtrash",
       "sqlite",
       "shellcheck",
+      "terraform",
       "tig",
       "tmux",
       "tree",
