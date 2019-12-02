@@ -70,7 +70,8 @@
       "sourcetree",
       "sublime-text",
       "vagrant",
-      "virtualbox"
+      "virtualbox",
+      "visual-studio-code"
     ]
   }
 }
