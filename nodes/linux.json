@@ -10,6 +10,7 @@
   ],
   "packages": [
     "git",
+    "pwgen",
     "tig",
     "tcpdump",
     "tmux",

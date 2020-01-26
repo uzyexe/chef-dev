@@ -35,6 +35,7 @@
       "markdown",
       "postgresql",
       "packer",
+      "pwgen",
       "rmtrash",
       "sqlite",
       "shellcheck",
