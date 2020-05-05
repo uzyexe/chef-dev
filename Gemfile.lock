@@ -6,7 +6,7 @@ GEM
     ast (2.4.0)
     backports (3.15.0)
     backticks (1.0.2)
-    bcrypt_pbkdf (1.0.1)
+    bcrypt_pbkdf (1.1.0.rc1)
     berkshelf (7.0.10)
       chef (>= 13.6.52)
       chef-config
@@ -21,12 +21,12 @@ GEM
       solve (~> 4.0)
       thor (>= 0.20)
     builder (3.2.4)
-    chef (16.0.257)
+    chef (16.0.275)
       addressable
-      bcrypt_pbkdf (~> 1.0)
+      bcrypt_pbkdf (= 1.1.0.rc1)
       bundler (>= 1.10)
-      chef-config (= 16.0.257)
-      chef-utils (= 16.0.257)
+      chef-config (= 16.0.275)
+      chef-utils (= 16.0.275)
       chef-vault
       chef-zero (>= 14.0.11)
       diff-lcs (~> 1.2, >= 1.2.4)
@@ -55,14 +55,14 @@ GEM
       train-winrm (>= 0.2.5)
       tty-screen (~> 0.6)
       uuidtools (~> 2.1.5)
-    chef-config (16.0.257)
+    chef-config (16.0.275)
       addressable
-      chef-utils (= 16.0.257)
+      chef-utils (= 16.0.275)
       fuzzyurl
       mixlib-config (>= 2.2.12, < 4.0)
       mixlib-shellout (>= 2.0, < 4.0)
       tomlrb (~> 1.2)
-    chef-utils (16.0.257)
+    chef-utils (16.0.275)
     chef-vault (4.0.1)
     chef-zero (15.0.0)
       ffi-yajl (~> 2.2)
